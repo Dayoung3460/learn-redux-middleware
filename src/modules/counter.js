@@ -1,7 +1,7 @@
 import {createAction, handleActions} from "redux-actions";
 
-const INCREASE = 'counter/increase'
-const DECREASE = 'counter/decrease'
+const INCREASE = 'counter/INCREASE'
+const DECREASE = 'counter/DECREASE'
 
 export const increase = createAction(INCREASE)
 export const decrease = createAction(DECREASE)

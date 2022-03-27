@@ -1,5 +1,5 @@
-import React from 'react';
-import Counter, {decrease, increase} from "../modules/counter";
+import Counter from '../components/Counter'
+import {decrease, increase} from "../modules/counter";
 import {connect} from "react-redux";
 
 const CounterContainer = ({ number, increase, decrease }) => {

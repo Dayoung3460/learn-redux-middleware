@@ -1,5 +1,6 @@
 import {createAction, handleActions} from "redux-actions";
 
+// action.type
 const INCREASE = 'counter/INCREASE'
 const DECREASE = 'counter/DECREASE'
 

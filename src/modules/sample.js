@@ -6,11 +6,11 @@ import createRequestThunk from "../lib/createRequestThunk";
 // three per a request
 const GET_POST = 'sample/GET_POST'
 const GET_POST_SUCCESS = 'sample/GET_POST_SUCCESS'
-const GET_POST_FAILURE = 'sample/GET_POST_FAILURE'
+// const GET_POST_FAILURE = 'sample/GET_POST_FAILURE'
 
 const GET_USERS = 'sample/GET_USERS'
 const GET_USERS_SUCCESS = 'sample/GET_USERS_SUCCESS'
-const GET_USERS_FAILURE = 'sample/GET_USERS_FAILURE'
+// const GET_USERS_FAILURE = 'sample/GET_USERS_FAILURE'
 
 export const getPost = createRequestThunk(GET_POST, api.getPost)
 export const getUsers = createRequestThunk(GET_USERS, api.getUsers)
@@ -54,66 +54,66 @@ export const getUsers = createRequestThunk(GET_USERS, api.getUsers)
 // declare initial state
 // loading object controls the loading state
 const initialState = {
-    loading: {
-        GET_POST: false,
-        GET_USERS: false
-    },
+    // loading: {
+    //     GET_POST: false,
+    //     GET_USERS: false
+    // },
     post: null,
     users: null
 }
 
 const sample = handleActions(
     {
-        [GET_POST]: state => ({
-            ...state,
-            loading: {
-                ...state.loading,
-                // request started
-                GET_POST: true
-            }
-        }),
+        // [GET_POST]: state => ({
+        //     ...state,
+        //     loading: {
+        //         ...state.loading,
+        //         // request started
+        //         GET_POST: true
+        //     }
+        // }),
         [GET_POST_SUCCESS]: (state, action) => ({
             ...state,
-            loading: {
-                ...state.loading,
-                // request succeeded
-                GET_POST: false
-            },
+            // loading: {
+            //     ...state.loading,
+            //     // request succeeded
+            //     GET_POST: false
+            // },
             post: action.payload
         }),
-        [GET_POST_FAILURE]: (state, action) => ({
-            ...state,
-            loading: {
-                ...state.loading,
-                // request failed
-                GET_POST: true
-            },
-        }),
-        [GET_USERS]: state => ({
-            ...state,
-            loading: {
-                ...state.loading,
-                // request started
-                GET_USERS: true
-            }
-        }),
+        // [GET_POST_FAILURE]: (state, action) => ({
+        //     ...state,
+        //     loading: {
+        //         ...state.loading,
+        //         // request failed
+        //         GET_POST: true
+        //     },
+        // }),
+        // [GET_USERS]: state => ({
+        //     ...state,
+        //     loading: {
+        //         ...state.loading,
+        //         // request started
+        //         GET_USERS: true
+        //     }
+        // }),
         [GET_USERS_SUCCESS]: (state, action) => ({
             ...state,
-            loading: {
-                ...state.loading,
-                // request succeeded
-                GET_USERS: false
-            },
+            // loading: {
+            //     ...state.loading,
+            //     // request succeeded
+            //     GET_USERS: false
+            // },
             users: action.payload
         }),
-        [GET_USERS_FAILURE]: (state, action) => ({
-            ...state,
-            loading: {
-                ...state.loading,
-                // request failed
-                GET_USERS: false
-            },
-        }),
+        // [GET_USERS_FAILURE]: (state, action) => ({
+        //     ...state,
+        //     loading: {
+        //         ...state.loading,
+        //         // request failed
+        //         GET_USERS: false
+        //     },
+        // }),
     },
     initialState
 )

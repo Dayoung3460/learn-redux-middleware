@@ -14,7 +14,7 @@ const SampleContainer = ({
 }) => {
   useEffect(() => {
     getPost(1)
-    getUsers()
+    getUsers(1)
   }, [getPost, getUsers])
   return (
     <Sample
